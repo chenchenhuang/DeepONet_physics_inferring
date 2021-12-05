@@ -75,7 +75,7 @@ def train(train_x1,train_x2,val_x1,val_x2,train_y,val_y):
         print(f"Epoch: {epoch}, loss: {loss:.2e}, val_loss: {val_loss:.2e}")
         
       if epoch % 5000 == 0  or epoch==max_epoch:
-        weight_path = path + 'trained_model/model_cc_dec1/model_{}'.format(epoch)
+        weight_path = path + 'trained_model/model_15_15_30/model_{}'.format(epoch)
         model.save_weights(weight_path)
 
 
@@ -89,7 +89,7 @@ class DataPrep():
     with h5py.File(path + 'train_dataset_two.mat', 'r') as file:
       train_data = list(file['data_train'])
 
-    with h5py.File(path + '/val_dataset_two.mat', 'r') as file:
+    with h5py.File(path + 'val_dataset_two.mat', 'r') as file:
       val_data = list(file['data_val'])
 
     train_y = train_data[4]
@@ -114,7 +114,7 @@ class DataPrep():
 
 if __name__ == '__main__':
   
-  path = '/Users/huangchenchen/Dropbox/AME508_Project/double_para/'
+  path = './'
   
   data_load = DataPrep(path)
   
