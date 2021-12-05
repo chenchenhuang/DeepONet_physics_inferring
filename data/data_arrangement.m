@@ -1,15 +1,12 @@
 % data spiltting 
-% 50 slices for testing. 40% for training and 10% validation
+% 50 slices for testing. 30% for training and 20% validation
 clc
 clear
 
-load training_data_two
+load training_data_raw
 
 paraNum = size(result,3);
 gridNum = size(result,1);
-
-% trainingPerc = .5;
-% testingPerc = .4;
 
 IndexList = 1:paraNum;
 

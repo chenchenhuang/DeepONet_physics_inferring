@@ -27,7 +27,7 @@ xgrid = [];
 tgrid = [];
 
 for i = 1:size(computationlist,1)
-    tic
+    
     a1 = computationlist(i,1);
     a2 = computationlist(i,2);
     a3 = a2;
@@ -41,8 +41,7 @@ for i = 1:size(computationlist,1)
 %     result_m = matfile(result_file_name,'writable',true);
 % % 
 %     result_m.u = u;
+    mkdir('./datasets')
+    save(['./datasets/observation_data/',num2str(i)],'u','-v7')
     
-    save(['/Users/huangchenchen/Dropbox/AME508_Project/data_generating/observation_data/',num2str(i)],'u','-v7')
-    
-    toc
 end

@@ -27,7 +27,7 @@ xgrid = [];
 tgrid = [];
 
 parfor i = 1:size(computationlist,1)
-    tic
+    
     a1 = computationlist(i,1);
     a2 = computationlist(i,2);
     a3 = a2;
@@ -35,15 +35,13 @@ parfor i = 1:size(computationlist,1)
     [u,x,t] = AllenEQ(a1,a2,a3,meshDensity);
     
     uData(:,:,i) = u';
-    xgrid = x;
-    tgrid = t;
-    toc
+
 end
 
-% result_file_name = 'grid';
-% result_m = matfile(result_file_name,'writable',true);
+result_file_name = 'training_data_raw';
+result_m = matfile(result_file_name,'writable',true);
 % 
-% result_m.result = uData;
-% result_m.paralist = computationlist;
+result_m.result = uData;
+result_m.paralist = computationlist;
 % result_m.xgrid = xgrid;
 % result_m.tgrid = tgrid;

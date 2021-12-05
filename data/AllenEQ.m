@@ -1,3 +1,6 @@
+
+% MATLAB ODE45 %
+
 % SOLVE  du/dt = a1 d2u/dx2 - a2 u^3 + a3 u
 % initial condition: u(t=0) = x^2 cos(pi x)
 % boundary condition: u(x=1) = u(x=-1), du/dx(x=1) = du/dx(x=-1) 
