@@ -41,3 +41,8 @@ The goal is using those measurements and above Allen-Cahn equation with IC\&BCs 
 |:--:| 
 | *Training loss and validation loss of DeepONet* |
 
+| ![test](https://github.com/chenchenhuang/DeepONet_physics_inferring/blob/main/figures/partial_ob.png) | 
+|:--:| 
+| *Result with partial observations* |
+
+
