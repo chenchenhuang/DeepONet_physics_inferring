@@ -5,7 +5,7 @@ The sample problem we solve here is Allen-Cahn equation.
 
 ##  Motivation
 
-Previous work on physics informed neural network (PINN) can infer solution of given physics problems assuming the whole differential equation is known in advance \cite{Raissi2020,Raissi2019}. However, in most dynamics or fluid dynamics problem, though we can affirm the governing differential equation, some parameters might remain unknown. Meanwhile, in some experiments, there are limitations that we cannot measure all the states. Therefore, it is worthwhile developing an architecture that can solve or approximate the solution only based on limited information. Moreover, field data is difficult to measure in a large extend, usually what we can measure are time snapshots at sparse locations. This motivates us to find a method which can be helping in inferring both the parameter and the whole physics field in this situation. 
+Previous work on physics informed neural network (PINN) can infer solution of given physics problems assuming the whole differential equation is known in advance. However, in most dynamics or fluid dynamics problem, though we can affirm the governing differential equation, some parameters might remain unknown. Meanwhile, in some experiments, there are limitations that we cannot measure all the states. Therefore, it is worthwhile developing an architecture that can solve or approximate the solution only based on limited information. Moreover, field data is difficult to measure in a large extend, usually what we can measure are time snapshots at sparse locations. This motivates us to find a method which can be helping in inferring both the parameter and the whole physics field in this situation. 
 
 For example, for a time-evolving physical system, a swimming fish in liquid, we can estimate the governing equation of the flow field, but the parameters are unknown. And we only can experimentally measure the velocity at limited locations, for example using PIV. 
 
@@ -20,7 +20,7 @@ Here, we consider dimensionless governing equation of state $u(x,t)$ on domain $
 
 where $\alpha_1\ll 1$, and $\alpha_2 \gg \alpha_1$. 
 
-Assume we have some measurements of this system, and we want to use these measurements to recover the whole field and find the associated parameters set. The schematic diagram is in Fig.\ref{fig:sample}; assume we only have spatially sparse distributed sensors along these four lines where the arrows are pointing at. Thus, we can measure the field at these four specific locations along the whole time. 
+Assume we have some measurements of this system, and we want to use these measurements to recover the whole field and find the associated parameters set. The schematic diagram is in Fig 1; assume we only have spatially sparse distributed sensors along these four lines where the arrows are pointing at. Thus, we can measure the field at these four specific locations along the whole time. 
 
 The goal is using those measurements and above Allen-Cahn equation with IC\&BCs to recover the field $u$ and parameters $\alpha_1$, $\alpha_2$.
 
