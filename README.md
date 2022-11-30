@@ -16,15 +16,8 @@ How to infer unknown parameters of partially-observable physical system? We prop
 For a system with knowing governing equation $\mathcal{L}[\mathbf{u}(\mathbf{x},t);\boldsymbol{\alpha}] = 0$, unknown parameters $\boldsymbol{\alpha}$, and some experimental or numerical measurements $\mathbf{u}_s$, we want to recover the full field and find the unknown parameters. Particularly, we are solving 1D phase separation evolution system. The Allen–Cahn equation is a mathematical model for phase separation processes. The equation describes the time evolution of a scalar-valued state variable u on 1D space domain $x$ during a time interval $t$.
 
 where $\epsilon$ is a small number, and $f'(u) = \frac{d f(u)}{du}$, with $f(u) = \frac{1}{4}(u^2-1)^2$, as a double-well potential. \par
-Here, we consider dimensionless governing equation of state $u(x,t)$ on domain $x\in[-1,1],\; t\in[0,1]$ with periodic boundary conditions. Choose an initial state, we have the system 
-\begin{align}
-    \begin{split}
-        u_t &= \alpha_1 u_{xx} - \alpha_2 (u^3 -  u),\\
-        u(t=0) &= x^2 \cos(\pi x),\\
-        u(x=-1) &= u(x=1),\\
-        u_x(x=-1) &= u_x(x=1).
-    \end{split}
-\end{align}
+Here, we consider dimensionless governing equation of state $u(x,t)$ on domain $x\in[-1,1],\; t\in[0,1]$ with periodic boundary conditions. Choose an initial state, we have the system $u_t &= \alpha_1 u_{xx} - \alpha_2 (u^3 -  u)$ with I.C.: $u(t=0) &= x^2 \cos(\pi x)$ and B.C.: $u(x=-1) &= u(x=1)$a and $u_x(x=-1) &= u_x(x=1)$.
+
 where $\alpha_1\ll 1$, and $\alpha_2 \gg \alpha_1$. 
 
 Assume we have some measurements of this system, and we want to use these measurements to recover the whole field and find the associated parameters set. The schematic diagram is in Fig.\ref{fig:sample}; assume we only have spatially sparse distributed sensors along these four lines where the arrows are pointing at. Thus, we can measure the field at these four specific locations along the whole time. 
