@@ -5,11 +5,15 @@ The sample problem we solve here is Allen-Cahn equation.
 
 ##  Motivation
 
-Previous work on physics informed neural network (PINN) can infer solution of given physics problems assuming the whole differential equation is known in advance. However, in most dynamics or fluid dynamics problem, though we can affirm the governing differential equation, some parameters might remain unknown. Meanwhile, in some experiments, there are limitations that we cannot measure all the states. Therefore, it is worthwhile developing an architecture that can solve or approximate the solution only based on limited information. Moreover, field data is difficult to measure in a large extend, usually what we can measure are time snapshots at sparse locations. This motivates us to find a method which can be helping in inferring both the parameter and the whole physics field in this situation. 
+Prior studies on Physics-Informed Neural Networks (PINNs) have made significant strides in estimating solutions for specified physics-related problems, premised on the assumption that the complete differential equation associated with the problem is pre-established. This assumption, however, may not hold true in most scenarios, especially in dynamic or fluid dynamic contexts, wherein the governing differential equations may be determined, yet certain parameters might remain unidentified.
 
-For example, for a time-evolving physical system, a swimming fish in liquid, we can estimate the governing equation of the flow field, but the parameters are unknown. And we only can experimentally measure the velocity at limited locations, for example using PIV. 
+Furthermore, the reality of experimental limitations often implies that not all states can be measured comprehensively. Therefore, the development of an architecture capable of solving or approximating solutions based on restricted information becomes crucial and significant.
 
-How to infer unknown parameters of partially-observable physical system? We propose this DeepONet in the following sections.
+This challenge is further compounded by the complexity of obtaining field data in large extents. More often than not, measurements can only be taken at discrete intervals, in the form of temporal snapshots at sparsely located points. These circumstances present a strong case for a method that can not only infer the unknown parameters but also reconstruct the complete physics field from limited information.
+
+Consider, for instance, a time-evolving physical system like a fish swimming in a liquid medium. Here, while the governing equation of the flow field can be reasonably estimated, the specific parameters may remain unknown. Moreover, our experimental capabilities might only allow us to measure the velocity at certain limited locations, potentially using methods like Particle Image Velocimetry (PIV).
+
+This raises a pertinent question: how can we infer the unknown parameters of such a partially-observable physical system? To address this, we propose the use of a novel method called DeepONet, which we will explore and explain in the ensuing sections. This approach seeks to enhance our ability to comprehend and interact with complex physical systems, enabling more accurate predictions and simulations.
 
 ## Objective
 
