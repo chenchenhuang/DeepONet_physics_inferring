@@ -1,7 +1,7 @@
 # Inferring unknown parameters of partially-observable system using Physics-informed-DeepONet
 
 A framework to use Deep Operator Network to infer unknown parameters of partially-observable physical system. 
-The sample problem we solve here is Allen-Cahn equation.
+The sample problem we solve here is 1D Allen-Cahn equation.
 
 ##  Motivation
 
